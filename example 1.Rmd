@@ -1,0 +1,140 @@
+---
+title: "Example 1"
+author: "Yizhong Zhang"
+date: "2023-08-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Example 1(how to write Rmarkdown)
+
+## 1. Grammer
+
+## 2. Code Chunks
+
+---
+### Part 1. Rmarkdown grammer
+
+#### 1. Headers (#:First Header ##: Second Header)
+
+#### 2. List: (Three symbols)
+
+* The first type(*)
+
++ The second type(+)
+
+- The third type(-)
+
+#### 3. hyperlinks: 
+
+Writing style: <>
+
+Example: If I want to give a link of Google, I just need to write <https://www.google.com/?gws_rd=ssl>
+or [Google](https://www.google.com/?gws_rd=ssl)
+
+#### 4. blockquotes
+
+Example: 
+
+> War Eagle!
+
+#### 5. Pictures:
+
+With a caption:
+
+![Google](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
+
+Without any captions:
+
+![](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
+
+#### 6. Math formula
+
+Where $\alpha$ is in degrees
+
+$$f(y|N, p) = \frac{N!}{y!(N-y)!} \cdot p^y \cdot (1-p)^{N-y}
+= {{N}\choose{y}} \cdot p^y \cdot (1-p)^{N-y}$$
+
+#### 7. Crossing-reference Sections
+
+[Google][id], [Google][id], [Google][id]
+
+[id]:https://www.google.com/
+
+#### 8. Tables
+
++---------------+---------------+--------------------+
+| Fruit         | Price         | Advantages         |
++===============+===============+====================+
+| *Bananas*     | $1.34         | - built-in wrapper |
+|               |               | - bright color     |
++---------------+---------------+--------------------+
+| Oranges       | $2.10         | - cures scurvy     |
+|               |               | - **tasty**        |
++---------------+---------------+--------------------+
+
+#### 9. List
+
+##### 1. Ordered List
+
+xxxxxxxxx
+
+1. xxxxxx
+
+2. xxxxxx
+
+3. xxxxxx
+
+##### 2. Unordered List
+
+xxxxxxx
+
+- xxxxxxx
+
+- xxxxxxx
+
+- xxxxxxx
+
+#### 10. Underline
+
+<u>underline</u>
+
+H~2~O           X^2^        
+
+#### 11. code chunks
+
+##### 1. options: eval (evaluate)
+            
+  echo & include (whether to include)
+            
+  cache
+
+```{r, echo=TRUE}
+  r <- 3
+```
+
+##### 5. Cache
+
+```{r computeA, cache=TRUE}
+a = 5
+```
+
+```{r, cache=TRUE}
+(d = 2*a)
+```
+
+```{r, cache=TRUE, dependson="computeA"}
+(d = 2*a)
+```
+
+
+
+
+
+
+
+
+
